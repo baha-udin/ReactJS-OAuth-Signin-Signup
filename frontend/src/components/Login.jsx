@@ -6,8 +6,13 @@ const Login = () => {
     const [password,setPassword] = useState('');
 
     const onChangeUsername = (e) => {
-        const value=  e.target.value
+        const value =  e.target.value
         setUsername(value)
+    }
+
+    const onChangePassword = (e) => {
+        const value = e.target.value
+        setPassword(value)
     }
 
     return (
@@ -24,7 +29,7 @@ const Login = () => {
 
                             <div className="form-group">
                             <label>Password</label>
-                            <input type="password" placeholder="password" className="form-control" />
+                            <input type="password" placeholder="password" className="form-control" value={password} onChange={onChangePassword}/>
                             </div>
                             <button className="btn btn-primary">Login</button>
                         </div>
