@@ -6,7 +6,8 @@ const Login = () => {
     const [password,setPassword] = useState('');
 
     const onChangeUsername = (e) => {
-        console.log(e.target.value)
+        const value=  e.target.value
+        setUsername(value)
     }
 
     return (
