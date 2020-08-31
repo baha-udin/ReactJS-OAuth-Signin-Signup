@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Daftar = () => {
     const [username,setUsername] = useState('');
@@ -38,7 +39,10 @@ return (
                             <label>Password</label>
                             <input type="text" placeholder="password" className="form-control" value = {password} onChange={onChangePassword}/>
                         </div>
-                        <button className="btn btn-primary"> Sign Up</button>
+                        <button className="btn btn-primary"> Sign Up</button>{' '}
+                        <Link to="/" className='btn btn-warning'>
+                            Cancel
+                        </Link>
                     </div>
                 </div>
             </div>

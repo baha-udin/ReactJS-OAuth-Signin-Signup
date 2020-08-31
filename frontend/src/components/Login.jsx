@@ -1,5 +1,5 @@
 import React, { useState} from 'react'
-
+import {Link, Route } from 'react-router-dom'
 
 const Login = () => {
     const [username,setUsername] = useState('');
@@ -31,7 +31,16 @@ const Login = () => {
                             <label>Password</label>
                             <input type="password" placeholder="password" className="form-control" value={password} onChange={onChangePassword}/>
                             </div>
-                            <button className="btn btn-primary">Login</button>
+                            <div className='row'>
+                                <div className='col-md-6'>
+                                    <button className="btn btn-primary">Login</button>
+                                </div>
+                                <div className='col-md-6 text-right'>    
+                                    <Link to ='/daftar'>
+                                    Halaman Daftar
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
                         </div>
                     </div>
